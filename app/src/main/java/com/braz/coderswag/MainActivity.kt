@@ -7,12 +7,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.braz.coderswag.Adapters.CategoryAdapter
 import com.braz.coderswag.Model.Category
 import com.braz.coderswag.Services.DataService
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var adapter: ArrayAdapter<Category>
+    lateinit var adapter: CategoryAdapter
      lateinit var categoryListView: ListView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1, DataService.categories)
+        adapter = CategoryAdapter(this, DataService.categories)
 
         categoryListView = findViewById(R.id.categoryListView)
         categoryListView.adapter = adapter
