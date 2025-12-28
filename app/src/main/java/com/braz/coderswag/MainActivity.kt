@@ -1,22 +1,19 @@
 package com.braz.coderswag
 
 import android.os.Bundle
-import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.ListView
-import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.braz.coderswag.Adapters.CategoryAdapter
-import com.braz.coderswag.Model.Category
+import com.braz.coderswag.Adapters.CategoryRecycleAdapter
 import com.braz.coderswag.Services.DataService
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var adapter: CategoryAdapter
-     lateinit var categoryListView: ListView
+    lateinit var adapter: CategoryRecycleAdapter
+     lateinit var categoryListView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,10 +26,15 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        adapter = CategoryAdapter(this, DataService.categories)
+        adapter = CategoryRecycleAdapter(this, DataService.categories)
 
         categoryListView = findViewById(R.id.categoryListView)
         categoryListView.adapter = adapter
+
+        val layoutManager = LinearLayoutManager(this)
+        categoryListView.layoutManager = layoutManager
+        categoryListView.setHasFixedSize(true)
+
 
 
 
