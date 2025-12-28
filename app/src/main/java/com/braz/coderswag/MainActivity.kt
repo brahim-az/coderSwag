@@ -1,8 +1,10 @@
 package com.braz.coderswag
 
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -31,6 +33,9 @@ class MainActivity : AppCompatActivity() {
 
         categoryListView = findViewById(R.id.categoryListView)
         categoryListView.adapter = adapter
+
+
+
 
 
     }
