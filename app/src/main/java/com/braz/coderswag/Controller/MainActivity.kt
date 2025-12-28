@@ -1,14 +1,17 @@
-package com.braz.coderswag
+package com.braz.coderswag.Controller
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.braz.coderswag.Adapters.CategoryRecycleAdapter
+import com.braz.coderswag.R
 import com.braz.coderswag.Services.DataService
+import com.braz.coderswag.Utilities.EXTRA_CATEGORY
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,7 +29,11 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        adapter = CategoryRecycleAdapter(this, DataService.categories)
+        adapter = CategoryRecycleAdapter(this, DataService.categories) { category ->
+            val productIntent = Intent(this, ProductsActivity::class.java)
+            productIntent.putExtra(EXTRA_CATEGORY,category.title)
+            startActivity(productIntent)
+        }
 
         categoryListView = findViewById(R.id.categoryListView)
         categoryListView.adapter = adapter
@@ -34,9 +41,6 @@ class MainActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(this)
         categoryListView.layoutManager = layoutManager
         categoryListView.setHasFixedSize(true)
-
-
-
 
 
 

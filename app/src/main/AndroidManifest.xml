@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CoderSwag">
         <activity
-            android:name=".MainActivity"
+            android:name=".Controller.ProductsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Controller.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
