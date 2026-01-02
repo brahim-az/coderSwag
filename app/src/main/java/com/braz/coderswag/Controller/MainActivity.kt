@@ -1,4 +1,4 @@
-package com.braz.coderswag
+package com.braz.coderswag.Controller
 
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.braz.coderswag.Model.Category
+import com.braz.coderswag.R
 import com.braz.coderswag.Services.DataService
 
 class MainActivity : AppCompatActivity() {
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1, DataService.categories)
+        adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, DataService.categories)
 
         categoryListView = findViewById(R.id.categoryListView)
         categoryListView.adapter = adapter
