@@ -10,10 +10,11 @@ import android.widget.TextView
 import com.braz.coderswag.Model.Category
 import com.braz.coderswag.R
 
-class CategoryAdapter(context: Context,categories: List<Category>): BaseAdapter() {
+class CategoryAdapter(context: Context, categories: List<Category>): BaseAdapter() {
 
     val context = context
     val categories = categories
+
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View? {
         val categoryView: View
 
@@ -23,7 +24,7 @@ class CategoryAdapter(context: Context,categories: List<Category>): BaseAdapter(
         println("Heavy Computing")
 
         val category = categories[position]
-        categoryName.text = category.title
+            categoryName.text = category.title
 
         val resourceId = context.resources.getIdentifier(category.image,"drawable",context.packageName)
         categoryImage.setImageResource(resourceId)
