@@ -1,14 +1,13 @@
-package com.braz.coderswag
+package com.braz.coderswag.Controller
 
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.braz.coderswag.Adapters.CategoryAdapter
-import com.braz.coderswag.Model.Category
+import com.braz.coderswag.R
 import com.braz.coderswag.Services.DataService
 
 class MainActivity : AppCompatActivity() {
