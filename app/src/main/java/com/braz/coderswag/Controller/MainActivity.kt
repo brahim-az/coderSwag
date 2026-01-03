@@ -1,13 +1,14 @@
-package com.braz.coderswag
+package com.braz.coderswag.Controller
 
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.braz.coderswag.Adapters.CategoryRecycleAdapter
+import com.braz.coderswag.R
 import com.braz.coderswag.Services.DataService
 
 class MainActivity : AppCompatActivity() {

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Controller.MainActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -20,8 +20,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categoryListView"
-        android:layout_width="389dp"
-        android:layout_height="664dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:divider="@null"
         app:layout_constraintBottom_toBottomOf="parent"
