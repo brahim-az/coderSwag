@@ -42,7 +42,6 @@ class MainActivity : AppCompatActivity() {
         categoryListView.layoutManager = layoutManager
         categoryListView.setHasFixedSize(true)
 
-
-
     }
 }
+
